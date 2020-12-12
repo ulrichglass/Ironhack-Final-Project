@@ -4,7 +4,7 @@ Public files for my final project completed at Ironhack Data Analytics Bootcamp 
 ## Overview
 The idea was to build a complete pipeline:
 <ul>
-  <li>fetching tweets directed to a certain Twitter user via API (excluding retweets and replies);</li>
+  <li>fetching tweets directed to a @AppleSupport via API (excluding retweets and replies);</li>
   <li>storing them on a MySQL Database on AWS RDS;</li>
   <li>sending the tweets to Microsoft Azure Cognitive Services for sentiment analysis and opinion mining via API;</li>
   <li>updating and storing the enriched data on AWS RDS;</li>
@@ -18,7 +18,7 @@ The idea was to build a complete pipeline:
                                       
 ## Website
 <p>http://nlp-twitter-test-env.eba-cw2p6wnm.us-east-2.elasticbeanstalk.com<br>
-(not available all the time to save AWS budget)</p>
+(not available all the time due to AWS free tier limits)</p>
 <p>Home</p>
 <img src="pictures/website1.png" alt="Website | Home">
 <p>Testing</p>
