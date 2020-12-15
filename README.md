@@ -2,7 +2,6 @@
 Public files for my final project completed at Ironhack Data Analytics Bootcamp in December 2020.
 
 ## Overview
-Presentation
 The idea was to build a complete pipeline:
 <ul>
   <li>fetching tweets directed to a <a href="twitter.com/AppleSupport">@AppleSupport</a> via <a href="www.tweepy.org">API</a> (excluding retweets and replies);</li>
