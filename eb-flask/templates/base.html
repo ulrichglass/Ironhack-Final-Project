@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        {% block head %}{% endblock %}
+    </head>
+    <body class="subpage">
+        
+            <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="/" class="logo">Twitter Sentiment Analysis on @AppleSupport</a>
+                <nav id="nav">
+                    <a href="/">Home</a>
+                    <a href="/testing">Testing</a>
+                    <a href="/new">New Tweets</a>
+                    <a href="/archive">Archive</a>
+                    <a href="/about">About</a>
+                </nav>
+                <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+            </div>
+        </header>
+
+        {% block body %}{% endblock %}
+
+
+        <!-- Footer -->
+        <footer id="footer">
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>

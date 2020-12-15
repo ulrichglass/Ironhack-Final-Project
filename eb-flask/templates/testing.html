@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Twitter Sentiment Analysis | Testing</title>
+{% endblock %}
+{% block body %}
+
+    <section id="main" class="wrapper">
+        <div class="inner">
+            <!-- Elements -->
+            <h2 id="elements">Testing</h2>
+            <div class="flex flex-2"></div>
+                
+                <!-- <div class="6u 12u$(medium)"> -->
+                    <h3>Input</h3>
+                    <!-- Form -->
+                    <form method="post" action="#">
+                        <div class="row uniform">
+                            <div class="12u$">
+                                <textarea name="test-text" id="test-text" placeholder="Enter your text" rows="6"></textarea>
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Submit", class="button special"></li>
+                                    <li><input type="reset" value="Reset", class="button special"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                <!-- </div> -->
+
+                <!-- <div class="6u$ 12u$(medium)"> -->
+                    <!-- Box -->
+                    <div class="box">
+
+                    <h3>Result</h3>
+                        <table>
+                            <tr>
+                                <th>Level</th>
+                                <th>No</th>
+                                <th>Text</th>
+                                <th>Sentiment</th>
+                                <th>ConfLevPos</th>
+                                <th>ConfLevNeu</th>
+                                <th>ConfLevNeg</th>
+                            </tr>
+                            <tr>
+                                {% for result in result_sentiment %}
+                                <td>{{ result[0] }}</td>
+                                <td>{{ result[1] }}</td>
+                                <td>{{ result[2] }}</td>
+                                <td>{{ result[3] }}</td>
+                                <td>{{ result[4] }}</td>
+                                <td>{{ result[5] }}</td>
+                                <td>{{ result[6] }}</td>
+                            </tr>
+                            {% endfor %} 
+                        </table>
+                    </div>
+
+                <!-- </div>  -->
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

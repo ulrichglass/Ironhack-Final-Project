@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Twitter Sentiment Analysis | New Tweets</title>
+{% endblock %}
+{% block body %}
+
+    <section id="main" class="wrapper">
+        <div class="inner">
+            <form method="post" action="#">
+                <div class="12u$">
+                    <ul class="actions">
+                        <li><input type="submit" value="Fetch New Tweets", name="new", class="button special"></li>
+                        <li><input type="submit" value="Fetch Sentiments", name="new", class="button special"></li>
+                        <li>
+                            <select name="mention">
+                                <option value="{{ sel }}", selected>{{ sel }}</option>
+                                {% for o in other %}
+                                    <option value="{{ o[0] }}">{{ o[0] }}</option>
+                                {% endfor %}
+                                <!-- <option value="@Microsoft">@Microsoft</option> -->
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <h2 id="content">New Tweets</h2>
+            <div class="flex flex-2">
+                
+                {% if tweets|length < 1 %}
+                <h4 style="text-align: center">There are no new tweets in the database.</h4>
+                {% else %}
+                <table>
+                    <tr>
+                        <th>Tweet ID</th>
+                        <th>Tweet Date</th>
+                        <th>Twitter User</th>
+                        <th>Tweet</th>
+                        <th>Language</th>
+                        <th>Status</th>
+                        <th>Sentiment Microsoft Azure Cognitive Services</th>
+                        <th>Positive Confidence Score</th>
+                        <th>Neutral Confidence Score</th>
+                        <th>Negative Confidence Score</th>
+                        <th>Tweet Mention</th>
+                    </tr>
+                    <tr>
+                    {% for tweet in tweets %}
+                        <td><a href={{ tweet[5] }}>{{ tweet[0] }}</a></td>
+                        <td>{{ tweet[1] }} </td>
+                        <td>{{ tweet[2] }}</td>
+                        <td>{{ tweet[3] }}</td>
+                        <td>{{ tweet[4] }}</td>
+                        <td>{{ tweet[6] }}</td>
+                        <td>{{ tweet[7] }}</td>
+                        <td>{{ tweet[8] }}</td>
+                        <td>{{ tweet[9] }}</td>
+                        <td>{{ tweet[10] }}</td>
+                        <td>{{ tweet[13] }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+
+            </div>
+        </div>
+    </section>   
+
+{% endblock %}
