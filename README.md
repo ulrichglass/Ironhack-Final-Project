@@ -1,3 +1,5 @@
+<img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
+
 # Ironhack Final Project
 Public files for my final project completed at Ironhack Data Analytics Bootcamp in December 2020.
 
